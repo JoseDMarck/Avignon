@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style type='text/css'>
+    #info {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        background: #fff;
+    }
+</style>
+<div id='map'></div>
+<pre id='info'></pre>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZWRldXRlcm9zZG1hcmNrIiwiYSI6ImNpeDZtanNnOTAxZHoyemxkaWNnZzd4OHkifQ.U4_B3FTkhpSawdbFDQmhUg';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [4.823,43.946], // starting position
+    zoom: 13.2 // starting zoom
+});
+
+map.on('mousemove', function (e) {
+    document.getElementById('info').innerHTML =
+        // e.point is the x, y coordinates of the mousemove event relative
+        // to the top-left corner of the map
+        JSON.stringify(e.point) + '<br />' +
+            // e.lngLat is the longitude, latitude geographical position of the event
+        JSON.stringify(e.lngLat);
+});
+
+map.on('click', function (e) {
+        console.log(JSON.stringify(e.lngLat));   
+        
+});
+
+
+
+map.on('load', function () {
+
+ 
+
+
+
+  // AREAS COLOREADAS: AZULES
+ map.addSource('map-Blue', {
+        'type': 'geojson',
+        'data': {
+            'type': 'FeatureCollection',
+            "features": [
+                
+                
+
+                   /* COEUR DE VILLE */
+                 {
+                    "properties": {
+                         "name": "LE CŒUR DE VILLE <br> <span class='minus'>Cultiver l’art de vivre</span>",
+                         "description": "<p>Le cœur de ville historique d’Avignon fait l’objet d’une ambitieuse stratégie d’embellissement et de développement. Dans ce secteur sauvegardé, classé au patrimoine mondial de l’Unesco, la préservation du patrimoine n’est pas une contrainte mais une opportunité formidable pour  concevoir des projets  d’exception. Parmi ceux-ci, deux espaces emblématiques donnent les pouls du travail engagé : la requalification du Carré du Palais, ancien siège de la Banque de France, portée par l’Interprofession des vins des Côtes du Rhône. Inter Rhône, en pôle d’oeunoturisme ; et la reconversion du site de l’ancienne prison Sainte-Anne-Banasterie en pôle  d’habitat et de commerces. Enfin, l’arrivée du tramway, aux portes des remparts, constitue une occasion rare de valorisation et de requalification des espaces publics. Autant d’opérations qui vont largement participer de l’attractivité avignonnaise.</p>",
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                     [4.8055315,43.9532203],
+                     [4.804244,43.9523088],
+                     [4.8018193,43.9499607],
+                     [4.800725,43.9482305],
+                     [4.7996521,43.9470255],
+                     [4.7980857,43.9457586],
+                     [4.7978711,43.9450634],
+                     [4.7979784,43.9440437],
+                     [4.7993731,43.9435339],
+                     [4.8007464,43.9430395],
+                     [4.8017979,43.9430549],
+                     [4.8055744,43.942715],
+                     [4.8084712,43.9424987],
+                     [4.8145866,43.9438429],
+                     [4.815402,43.9442446],
+                     [4.819715,43.9500689],
+                     [4.8193717,43.9510112],
+                     [4.8195648,43.9515364],
+                     [4.817977,43.9520926],
+                     [4.8126125,43.9535138],
+                     [4.8094797,43.9534674],
+                     [4.8085999,43.9536373],
+                     [4.8072481,43.9536064],
+                     [4.8055315,43.9532203]
+
+                     ]] 
+                     }
+                 },
+
+                    /* AVIGNON CONFLUENCE */
+                 {
+                    "properties": {
+                         "name": "AVIGNON CONFLUENCE <br> <span class='minus'>À la rencontre des énergies</span>",
+                         "description": "<p>S’il est un espace stratégique pour imaginer et développer la ville de demain, c’est bien Avignon Confluence, entre Rhône et Durance. Ses atouts nombreux : une relation étroite avec le fleuve, la nature et les paysages, des espaces disponibles et maîtrisés, une proximité immédiate avec le cœur de la ville, plus de 300 entreprises déjà installées et la gare TGV, porte d’entrée de cet espace à fort potentiel. Avignon Confluence, c’est le prolongement nature, en termes de développement et d’urbanisme, de la ville métropolitaine.</p>",
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                     [4.766656,43.931244],
+                     [4.7629166,43.9309098],
+                     [4.7582388,43.9297045],
+                     [4.754591,43.9284373],
+                     [4.7505999,43.9260882],
+                     [4.751029,43.9256864],
+                     [4.7561789,43.9250373],
+                     [4.757638,43.9244809],
+                     [4.7805548,43.9212044],
+                     [4.7939014,43.9190096],
+                     [4.7954893,43.9187932],
+                     [4.7960043,43.9226263],
+                     [4.795194,43.92615],
+                     [4.794213,43.928581],
+                     [4.793734,43.928783],
+                     [4.792893,43.932442],
+                     [4.792051,43.934808],
+                     [4.791043,43.935575],
+                     [4.789703,43.935752],
+                     [4.7879362,43.9356384],
+                     [4.786198,43.935594],
+                     [4.7844172,43.9362565],
+                     [4.78317,43.936529],
+                     [4.781664,43.936522],
+                     [4.781235,43.935771],
+                     [4.774142,43.93301],
+                     [4.773103,43.932115]
+
+                     ]] 
+                     }
+                 },
+
+
+
+                  /* ZFU  */
+                 {
+                    "properties": {
+                         "name": "Zone franche urbaine <br> <span class='minus'>Un espoir pour les quartiers</span>",
+                         "description": "<p>Lancée officiellement en aout 2006, la zone franche urbaine (ZFU) d’Avignon a permis de maintenir ou créer dans les quartiers dits sensibles des activités commerciales, artisanales ou de services, de les ouvrir sur l’extérieur pour y accroitre la mixité fonctionnelle et sociale, et d’améliorer la situation de l’emploi à des fins de cohésion sociale. Dans le cadre de la nouvelle politique de la ville mise en oeuvre par le gouvernement, le dispositif ZFU a été prorogé pour 6 ans (2015 – 2020). Devenu « Zone Franche Urbaine – Territoire Entrepreneur », son périmètre reste inchangé et inclut les secteurs de Monclar, Croix de Oiseaux, Saint Chamand et Rocade.</p>",
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                                     [4.797462,43.939324],
+                [4.796742,43.939257],
+                [4.796163,43.93927],
+                [4.795248,43.938973],
+                [4.794138,43.937409],
+                [4.793592,43.937103],
+                [4.793876,43.935641],
+                [4.794312,43.934868],
+                [4.794475,43.934855],
+                [4.794878,43.934177],
+                [4.795521,43.934051],
+                [4.794897,43.933909],
+                [4.794971,43.932056],
+                [4.796138,43.928349],
+                [4.796318,43.928233],
+                [4.796816,43.926192],
+                [4.798992,43.926544],
+                [4.800283,43.92714],
+                [4.800771,43.926995],
+                [4.801132,43.926786],
+                [4.801051,43.926341],
+                [4.801699,43.926327],
+                [4.801879,43.924806],
+                [4.7996521,43.9251146],
+                [4.798841,43.925187],
+                [4.798604,43.924702],
+                [4.800057,43.923353],
+                [4.801113,43.922793],
+                [4.801762,43.922668],
+                [4.801703,43.923352],
+                [4.802506,43.923414],
+                [4.802317,43.924173],
+                [4.802298,43.924768],
+                [4.802011,43.924807],
+                [4.801809,43.926297],
+                [4.801237,43.927073],
+                [4.803102,43.927366],
+                [4.803451,43.926175],
+                [4.804127,43.926093],
+                [4.804441,43.926934],
+                [4.804571,43.927801],
+                [4.805311,43.927784],
+                [4.805247,43.928432],
+                [4.804599,43.928447],
+                [4.804641,43.928691],
+                [4.807804,43.92833],
+                [4.809496,43.928202],
+                [4.809763,43.92795],
+                [4.811499,43.928134],
+                [4.811274,43.927225],
+                [4.811302,43.926443],
+                [4.815301,43.926129],
+                [4.815533,43.926503],
+                [4.815452,43.926772],
+                [4.815982,43.926894],
+                [4.816299,43.926374],
+                [4.816347,43.926061],
+                [4.815879,43.925937],
+                [4.815591,43.925699],
+                [4.815914,43.925334],
+                [4.817498,43.925566],
+                [4.81769,43.925004],
+                [4.818996,43.925242],
+                [4.819346,43.925479],
+                [4.819995,43.925487],
+                [4.8204017,43.9263278],
+                [4.820788,43.927387],
+                [4.820815,43.928011],
+                [4.819333,43.928],
+                [4.81891,43.927497],
+                [4.818278,43.927154],
+                [4.81779,43.927299],
+                [4.817046,43.927941],
+                [4.816771,43.927992],
+                [4.816452,43.928467],
+                [4.819672,43.928684],
+                [4.820381,43.928668],
+                [4.820672,43.928973],
+                [4.821131,43.928896],
+                [4.82146,43.928643],
+                [4.823909,43.928899],
+                [4.823889,43.928431],
+                [4.824185,43.928134],
+                [4.82465,43.928191],
+                [4.825819,43.928097],
+                [4.825783,43.9287],
+                [4.825055,43.928984],
+                [4.824469,43.928998],
+                [4.824351,43.929826],
+                [4.82502,43.930301],
+                [4.825763,43.930351],
+                [4.826304,43.929313],
+                [4.8258,43.929079],
+                [4.826264,43.928399],
+                [4.82628,43.928064],
+                [4.826903,43.927492],
+                [4.828111,43.926171],
+                [4.829186,43.926057],
+                [4.830883,43.92534],
+                [4.831158,43.925267],
+                [4.831911,43.925551],
+                [4.833781,43.927014],
+                [4.833205,43.927077],
+                [4.832357,43.927816],
+                [4.8331368,43.9282673],
+                [4.8333299,43.9285609],
+                [4.830747,43.93068],
+                [4.832217,43.930948],
+                [4.832634,43.930938],
+                [4.832827,43.930599],
+                [4.835162,43.930529],
+                [4.836464,43.930666],
+                [4.838984,43.9296272],
+                [4.844621,43.927004],
+                [4.845337,43.926954],
+                [4.8463118,43.9281977],
+                [4.847173,43.930274],
+                [4.848167,43.930251],
+                [4.848168,43.929733],
+                [4.848553,43.92954],
+                [4.848701,43.929754],
+                [4.84879,43.930187],
+                [4.848216,43.930819],
+                [4.847314,43.93084],
+                [4.847526,43.932491],
+                [4.846338,43.933372],
+                [4.844579,43.933915],
+                [4.842141,43.934272],
+                [4.84089,43.934267],
+                [4.840663,43.93173],
+                [4.839627,43.931335],
+                [4.839049,43.931348],
+                [4.836739,43.93095],
+                [4.8331153,43.9334132],
+                [4.829171,43.935733],
+                [4.828613,43.934987],
+                [4.827577,43.934587],
+                [4.827129,43.934932],
+                [4.826663,43.935567],
+                [4.8261,43.936093],
+                [4.825736,43.936235],
+                [4.82313,43.935938],
+                [4.820576,43.935417],
+                [4.820397,43.934863],
+                [4.820589,43.932896],
+                [4.820396,43.931124],
+                [4.820025,43.931116],
+                [4.820085,43.930897],
+                [4.819166,43.931068],
+                [4.818699,43.930978],
+                [4.81871,43.930694],
+                [4.819075,43.930568],
+                [4.819172,43.930148],
+                [4.818493,43.929963],
+                [4.818007,43.929974],
+                [4.817268,43.931078],
+                [4.816776,43.930939],
+                [4.816572,43.931027],
+                [4.815342,43.930971],
+                [4.815124,43.931278],
+                [4.813699,43.930975],
+                [4.815033,43.929724],
+                [4.815416,43.930016],
+                [4.81611,43.93],
+                [4.816225,43.929446],
+                [4.816032,43.929266],
+                [4.811286,43.928722],
+                [4.811214,43.929208],
+                [4.809585,43.929011],
+                [4.809243,43.928601],
+                [4.804606,43.928957],
+                [4.804769,43.929506],
+                [4.804146,43.929553],
+                [4.804084,43.929739],
+                [4.8036003,43.9320843],
+                [4.80307,43.933024],
+                [4.803586,43.933715],
+                [4.803064,43.933961],
+                [4.802082,43.933749],
+                [4.801461,43.93383],
+                [4.798952,43.934707],
+                [4.798359,43.935439],
+                [4.798102,43.935914],
+                [4.796402,43.936755],
+                [4.7965729,43.9376008],
+                [4.797462,43.939324]
+
+                     ]] 
+                     }
+                 },
+
+
+                     /* PARC INDUSTRIEL DU PLAN */
+                 {
+                    "properties": {
+                        "name": "PARC INDUSTRIEL DU PLAN <br> <span class='minus'>En avant l’esprit d’entreprise</span>",
+                         "description": "<p>Fort de sa desserte immédiate par l’A7, le Parc Industriel du Plan est un site dédié à l’accueil d’activités productives industrielles dans les domaines de l’agroalimentaire, de la logistique et de l’énergie. À ce jour, le site de 100 hectares compte de nombreuses entreprises de renommée internationale et constitue, avec près de 1500 emplois, l’un des principaux pôles économique du territoire.</p> <p>Afin d’amplifier   la dynamique productive, un projet d’extension sur 35 hectares est en cours de réalisation. Il comprend l’optimisation de la gestion des flux par des ouvrages de desserte adaptés et le déploiement de nouveaux services aux entreprises.</p>",
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                       [4.894812,43.974567],
+                [4.892068,43.974206],
+                [4.889076,43.97388],
+                [4.889461,43.972179],
+                [4.88803,43.971665],
+                [4.888281,43.970885],
+                [4.887872,43.970758],
+                [4.888968,43.968946],
+                [4.889529,43.969206],
+                [4.892733,43.965203],
+                [4.894036,43.962982],
+                [4.894086,43.960245],
+                [4.894945,43.960303],
+                [4.895243,43.957563],
+                [4.897946,43.957646],
+                [4.898105,43.956351],
+                [4.896894,43.956314],
+                [4.897168,43.955565],
+                [4.895247,43.955411],
+                [4.892922,43.95481],
+                [4.892967,43.95375],
+                [4.900772,43.954343],
+                [4.905786,43.954169],
+                [4.899802,43.963852],
+                [4.8981857,43.9665036],
+                [4.896736,43.968078],
+                [4.895085,43.971786],
+                [4.895971,43.97209],
+                [4.894812,43.974567]
+
+                     ]] 
+                     }
+                 },
+
+
+                    /* AVIGNON TECHNOPOLE */
+                 {
+                    "properties": {
+                         "name": "AVIGNON TECHNOPÔLE <br> <span class='minus'>Les idées ont besoin d’espaces</span>",
+                         "description": "<p>Avignon Technopôle rassemble en un même espace le monde de l’entreprise, le monde de la connaissance et le monde de la formation. Cet esprit cluster/campus favorite les échanges, les rencontres, les innovations et les hybridations entre ses composantes. Autour des deux grands pôles de compétitivité : TERRALIA (Agroalimentaire) er SAFE CLUSTER (Aéronautique-sécurité) s’agrègent des entreprises de renom : McCormick, Naturex ou encore RES, boostées par la présence de centres de recherche et d’enseignement d’excellence.</p><p>Cet écosystème original et efficace crée des passerelles naturelles entre recherche fondamentale et appliquée, entre disciplines, entre étudiants et entreprises, entre projet de start-up et pépinières… en somme, un savant mélange de culture de  l’innovation. Le Technopôle dispose d’un aéroport d’affaires et d’une excellente desserte par route. Demain, il sera relié par une ligne de bus à haut niveau de service en site propre qui le connectera directement au centre-ville d’Avignon.</p>",
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+                [4.884645,43.927551],
+                [4.881692,43.927664],
+                [4.88094,43.927902],
+                [4.8786592,43.9275409],
+                [4.877176,43.927637],
+                [4.877301,43.925829],
+                [4.87929,43.924603],
+                [4.884625,43.922164],
+                [4.886737,43.920822],
+                [4.887106,43.919535],
+                [4.886846,43.918483],
+                [4.885403,43.917591],
+                [4.883329,43.917584],
+                [4.882719,43.917241],
+                [4.882176,43.917375],
+                [4.881767,43.918112],
+                [4.880682,43.919063],
+                [4.87998,43.919068],
+                [4.87942,43.918464],
+                [4.877538,43.919368],
+                [4.877485,43.918521],
+                [4.875149,43.91604],
+                [4.875736,43.91553],
+                [4.878439,43.913599],
+                [4.882162,43.911616],
+                [4.882449,43.909162],
+                [4.885215,43.908304],
+                [4.885183,43.908944],
+                [4.884616,43.909222],
+                [4.884596,43.910126],
+                [4.88969,43.906924],
+                [4.89069,43.90786],
+                [4.891969,43.907286],
+                [4.893445,43.909263],
+                [4.895478,43.908691],
+                [4.895906,43.907266],
+                [4.895585,43.906572],
+                [4.894228,43.904496],
+                [4.894559,43.904127],
+                [4.896334,43.904041],
+                [4.896514,43.903108],
+                [4.900546,43.900637],
+                [4.901358,43.900529],
+                [4.902562,43.897255],
+                [4.904638,43.896626],
+                [4.905992,43.897342],
+                [4.905601,43.90003],
+                [4.907135,43.904561],
+                [4.9079704,43.9089621],
+                [4.908459,43.912386],
+                [4.904638,43.913599],
+                [4.902321,43.913816],
+                [4.901509,43.916114],
+                [4.899343,43.917046],
+                [4.897275,43.916781],
+                [4.8968554,43.9178967],
+                [4.897239,43.920393],
+                [4.895264,43.920208],
+                [4.891549,43.921679],
+                [4.890143,43.921602],
+                [4.88977,43.920773],
+                [4.889219,43.920742],
+                [4.889029,43.924648],
+                [4.885834,43.924811],
+                [4.885803,43.925473],
+                [4.882607,43.925614],
+                [4.882739,43.926515],
+                [4.884645,43.927551]
+
+
+                     ]] 
+                     }
+                 },
+
+
+                /* kml_1*/
+                 {
+                    "properties": {
+                         "name": "NPNRU",
+                         "description": "<p>Le NPNRU est un vaste programme de renouvellement urbain porté par le Grand Avignon et grâce à l’investissement massif de l’Etat en faveur des quartiers prioritaires, il vise à les rendre plus attractifs et plus humains, tout en améliorant le cadre de vie et en favorisant l’accès à l’emploi. Trois quartiers prioritaires d’Avignon sont concernés par ce programme, ce qui représente une population de plus de 25 000 habitants. Un programme qui doit permettre de répondre aux enjeux du territoire et rendre les quartiers réellement attractifs.  Casser les frontières</p> <p>Parmi les objectifs poursuivis  l’apaisement de la Rocade pour qu’elle devienneun véritable boulevard urbain, l’identification d’îlots urbains qui visent à casser la frontière naturelle constituée par la Rocade, la restructuration des équipements publics, et notamment la médiathèque Jean-Louis Barrault et le parc des sports, mais aussi la rénovation des équipements scolaires de proximité, le traitement particulier de l’entrée de ville au niveau de Saint-ChamandBarbière, la dé-densification du logement social en favorisant les parcours résidentiels et en permettant l’accueil d’une nouvelle population, et pour finir la requalification des espaces publics.</p> <p>Portée par la Communauté d’Agglomération du Grand Avignon en lien étroit avec la Ville d’Avignon, ce projet partenarial mobilise notamment les services de l’Etat représentés par l’Agence Nationale de Renouvellement urbain et les bailleurs.À terme, ce programme de renouvellement urbain permettra à cette partie du territoire de bénéficier d’un développement économique et d’une qualité de vie, sans précédents. La durée prévue s’étale entre 2017 et 2025. Le protocole a été officiellement signé par les partenaires le 9 novembre 2016 dernier à la Médiathèque Jean-Louis Barrault.</p> <br><br><p> Quartiers concernés par le NPNRU - Quartiers d’intérêt national <br> Sud (Monclar-Champfleury-Rocade Sud-Barbière-Croix des Oiseaux) <br> 17 770 habitants <br> Saint Chamand <br> 2 610 habitants Quartiers d’intérêt régional <br> Nord-Est (Reine Jeanne, Grange d’Orel, Neuf Peyres)<br> 4 960 habitants<br> </p>"
+                        
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                                       [4.831881,43.943128],
+                [4.832356,43.943068],
+                [4.832666,43.943017],
+                [4.832736,43.94299],
+                [4.832873,43.943195],
+                [4.83274,43.944346],
+                [4.832726,43.944491],
+                [4.833303,43.944604],
+                [4.833326,43.944993],
+                [4.833311,43.946275],
+                [4.833799,43.946177],
+                [4.833696,43.946981],
+                [4.834111,43.947027],
+                [4.834105,43.947048],
+                [4.834206,43.947026],
+                [4.83426,43.946903],
+                [4.834343,43.946964],
+                [4.834385,43.946933],
+                [4.834412,43.946959],
+                [4.834365,43.946991],
+                [4.834521,43.947113],
+                [4.834617,43.947195],
+                [4.834741,43.947292],
+                [4.834786,43.947266],
+                [4.834819,43.947287],
+                [4.834773,43.947318],
+                [4.834845,43.947378],
+                [4.834906,43.94743],
+                [4.834954,43.947398],
+                [4.834983,43.947423],
+                [4.834935,43.947456],
+                [4.835081,43.947574],
+                [4.83516,43.947638],
+                [4.835265,43.947711],
+                [4.835171,43.947994],
+                [4.834699,43.947962],
+                [4.834597,43.94836],
+                [4.83431,43.948415],
+                [4.834227,43.949003],
+                [4.833209,43.948936],
+                [4.833135,43.949479],
+                [4.834189,43.949568],
+                [4.834582,43.94978],
+                [4.834403,43.949967],
+                [4.83433,43.950071],
+                [4.834239,43.950177],
+                [4.833836,43.950156],
+                [4.833154,43.950138],
+                [4.832491,43.950114],
+                [4.832533,43.949081],
+                [4.83253,43.948926],
+                [4.832536,43.948712],
+                [4.832561,43.948475],
+                [4.832568,43.948277],
+                [4.832562,43.948251],
+                [4.832466,43.948245],
+                [4.832317,43.948238],
+                [4.832196,43.948235],
+                [4.832133,43.948194],
+                [4.831892,43.948182],
+                [4.831849,43.948225],
+                [4.831809,43.948224],
+                [4.831767,43.948177],
+                [4.831441,43.94816],
+                [4.831402,43.948204],
+                [4.831352,43.948202],
+                [4.831316,43.948156],
+                [4.830974,43.948144],
+                [4.830926,43.948177],
+                [4.830897,43.948176],
+                [4.830929,43.947806],
+                [4.830415,43.94778],
+                [4.83034,43.948023],
+                [4.830549,43.9481],
+                [4.830502,43.948694],
+                [4.830698,43.948832],
+                [4.830541,43.948909],
+                [4.829992,43.949318],
+                [4.829706,43.949545],
+                [4.829596,43.9492],
+                [4.828954,43.947554],
+                [4.828914,43.947091],
+                [4.828955,43.94708],
+                [4.828943,43.946897],
+                [4.829125,43.946786],
+                [4.829008,43.9465],
+                [4.828636,43.946551],
+                [4.828356,43.946624],
+                [4.82801,43.946775],
+                [4.828009,43.946726],
+                [4.82786,43.946728],
+                [4.827854,43.946738],
+                [4.82769,43.946737],
+                [4.827686,43.946726],
+                [4.827479,43.946728],
+                [4.827478,43.946683],
+                [4.827419,43.946572],
+                [4.827422,43.946136],
+                [4.827432,43.946106],
+                [4.827431,43.945726],
+                [4.827451,43.945023],
+                [4.827737,43.945028],
+                [4.827966,43.944903],
+                [4.827978,43.944672],
+                [4.827833,43.944451],
+                [4.827725,43.944179],
+                [4.828199,43.944157],
+                [4.828389,43.944156],
+                [4.828711,43.944188],
+                [4.828741,43.944064],
+                [4.828839,43.94357],
+                [4.829833,43.943557],
+                [4.830447,43.943491],
+                [4.830511,43.943513],
+                [4.830338,43.942463],
+                [4.830943,43.942411],
+                [4.83096,43.942487],
+                [4.83171,43.942452],
+                [4.831881,43.943128]
+
+                     ]] 
+                     }
+                 },
+
+
+                  /* kml_3*/
+                 {
+                    "properties": {
+                         "name": "NPNRU",
+                         "description": "<p>Le NPNRU est un vaste programme de renouvellement urbain porté par le Grand Avignon et grâce à l’investissement massif de l’Etat en faveur des quartiers prioritaires, il vise à les rendre plus attractifs et plus humains, tout en améliorant le cadre de vie et en favorisant l’accès à l’emploi. Trois quartiers prioritaires d’Avignon sont concernés par ce programme, ce qui représente une population de plus de 25 000 habitants. Un programme qui doit permettre de répondre aux enjeux du territoire et rendre les quartiers réellement attractifs.  Casser les frontières</p> <p>Parmi les objectifs poursuivis  l’apaisement de la Rocade pour qu’elle devienneun véritable boulevard urbain, l’identification d’îlots urbains qui visent à casser la frontière naturelle constituée par la Rocade, la restructuration des équipements publics, et notamment la médiathèque Jean-Louis Barrault et le parc des sports, mais aussi la rénovation des équipements scolaires de proximité, le traitement particulier de l’entrée de ville au niveau de Saint-ChamandBarbière, la dé-densification du logement social en favorisant les parcours résidentiels et en permettant l’accueil d’une nouvelle population, et pour finir la requalification des espaces publics.</p> <p>Portée par la Communauté d’Agglomération du Grand Avignon en lien étroit avec la Ville d’Avignon, ce projet partenarial mobilise notamment les services de l’Etat représentés par l’Agence Nationale de Renouvellement urbain et les bailleurs.À terme, ce programme de renouvellement urbain permettra à cette partie du territoire de bénéficier d’un développement économique et d’une qualité de vie, sans précédents. La durée prévue s’étale entre 2017 et 2025. Le protocole a été officiellement signé par les partenaires le 9 novembre 2016 dernier à la Médiathèque Jean-Louis Barrault.</p> <br><br><p> Quartiers concernés par le NPNRU - Quartiers d’intérêt national <br> Sud (Monclar-Champfleury-Rocade Sud-Barbière-Croix des Oiseaux) <br> 17 770 habitants <br> Saint Chamand <br> 2 610 habitants Quartiers d’intérêt régional <br> Nord-Est (Reine Jeanne, Grange d’Orel, Neuf Peyres)<br> 4 960 habitants<br> </p>"
+                        
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+               [4.845054,43.956106],
+                [4.843763,43.955807],
+                [4.843922,43.955122],
+                [4.844593,43.954996],
+                [4.844597,43.954989],
+                [4.844661,43.954989],
+                [4.84517,43.954886],
+                [4.845113,43.954052],
+                [4.846635,43.953953],
+                [4.846645,43.953845],
+                [4.846988,43.952481],
+                [4.84737,43.952507],
+                [4.847375,43.952328],
+                [4.848329,43.952288],
+                [4.848329,43.952154],
+                [4.849097,43.952179],
+                [4.849102,43.952157],
+                [4.849121,43.952157],
+                [4.8492,43.952155],
+                [4.84929,43.952245],
+                [4.849305,43.952269],
+                [4.849314,43.952291],
+                [4.849302,43.952328],
+                [4.849315,43.95239],
+                [4.849376,43.952407],
+                [4.849425,43.952431],
+                [4.849438,43.952479],
+                [4.849439,43.952523],
+                [4.849438,43.952556],
+                [4.849408,43.952616],
+                [4.849401,43.952688],
+                [4.849358,43.952856],
+                [4.849314,43.953021],
+                [4.849307,43.953118],
+                [4.849353,43.953261],
+                [4.849365,43.953404],
+                [4.849362,43.953478],
+                [4.849314,43.953622],
+                [4.849172,43.953641],
+                [4.849048,43.953658],
+                [4.848523,43.953695],
+                [4.84811,43.953723],
+                [4.847459,43.953796],
+                [4.847076,43.953816],
+                [4.846941,43.953938],
+                [4.846907,43.954135],
+                [4.846947,43.954136],
+                [4.847126,43.954266],
+                [4.847116,43.954957],
+                [4.847069,43.95502],
+                [4.846993,43.955041],
+                [4.846735,43.955042],
+                [4.846715,43.955122],
+                [4.846667,43.955385],
+                [4.845907,43.955351],
+                [4.845876,43.956045],
+                [4.845134,43.955872],
+                [4.845135,43.955939],
+                [4.845054,43.956106]
+
+                     ]] 
+                     }
+                 },
+
+
+                        /* kml_5*/
+                 {
+                    "properties": {
+                        "name": "NPNRU",
+                         "description": "<p>Le NPNRU est un vaste programme de renouvellement urbain porté par le Grand Avignon et grâce à l’investissement massif de l’Etat en faveur des quartiers prioritaires, il vise à les rendre plus attractifs et plus humains, tout en améliorant le cadre de vie et en favorisant l’accès à l’emploi. Trois quartiers prioritaires d’Avignon sont concernés par ce programme, ce qui représente une population de plus de 25 000 habitants. Un programme qui doit permettre de répondre aux enjeux du territoire et rendre les quartiers réellement attractifs.  Casser les frontières</p> <p>Parmi les objectifs poursuivis  l’apaisement de la Rocade pour qu’elle devienneun véritable boulevard urbain, l’identification d’îlots urbains qui visent à casser la frontière naturelle constituée par la Rocade, la restructuration des équipements publics, et notamment la médiathèque Jean-Louis Barrault et le parc des sports, mais aussi la rénovation des équipements scolaires de proximité, le traitement particulier de l’entrée de ville au niveau de Saint-ChamandBarbière, la dé-densification du logement social en favorisant les parcours résidentiels et en permettant l’accueil d’une nouvelle population, et pour finir la requalification des espaces publics.</p> <p>Portée par la Communauté d’Agglomération du Grand Avignon en lien étroit avec la Ville d’Avignon, ce projet partenarial mobilise notamment les services de l’Etat représentés par l’Agence Nationale de Renouvellement urbain et les bailleurs.À terme, ce programme de renouvellement urbain permettra à cette partie du territoire de bénéficier d’un développement économique et d’une qualité de vie, sans précédents. La durée prévue s’étale entre 2017 et 2025. Le protocole a été officiellement signé par les partenaires le 9 novembre 2016 dernier à la Médiathèque Jean-Louis Barrault.</p> <br><br><p> Quartiers concernés par le NPNRU - Quartiers d’intérêt national <br> Sud (Monclar-Champfleury-Rocade Sud-Barbière-Croix des Oiseaux) <br> 17 770 habitants <br> Saint Chamand <br> 2 610 habitants Quartiers d’intérêt régional <br> Nord-Est (Reine Jeanne, Grange d’Orel, Neuf Peyres)<br> 4 960 habitants<br> </p>"
+                        
+                    },
+
+
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+
+                               [4.857315,43.964973],
+                [4.856669,43.964848],
+                [4.856632,43.964922],
+                [4.856533,43.964907],
+                [4.856511,43.964956],
+                [4.856229,43.964905],
+                [4.856169,43.964917],
+                [4.856086,43.964956],
+                [4.855353,43.964229],
+                [4.85482,43.963697],
+                [4.854458,43.96337],
+                [4.855015,43.963232],
+                [4.855434,43.96308],
+                [4.855536,43.96303],
+                [4.855693,43.962789],
+                [4.855997,43.962528],
+                [4.856104,43.962494],
+                [4.85631,43.962244],
+                [4.856289,43.962231],
+                [4.856594,43.961864],
+                [4.855989,43.961643],
+                [4.85598,43.961567],
+                [4.856038,43.961482],
+                [4.855969,43.961363],
+                [4.855955,43.961225],
+                [4.856029,43.961133],
+                [4.856024,43.961108],
+                [4.856058,43.961058],
+                [4.856181,43.960888],
+                [4.856378,43.960627],
+                [4.855293,43.960191],
+                [4.854885,43.960011],
+                [4.854381,43.959809],
+                [4.854225,43.959739],
+                [4.854193,43.959769],
+                [4.854115,43.960306],
+                [4.854123,43.96049],
+                [4.854126,43.960657],
+                [4.853744,43.960599],
+                [4.853687,43.960877],
+                [4.853534,43.961141],
+                [4.853253,43.96167],
+                [4.853116,43.961904],
+                [4.85304,43.961876],
+                [4.852819,43.961816],
+                [4.85223,43.961351],
+                [4.851293,43.960739],
+                [4.851233,43.960449],
+                [4.851162,43.960453],
+                [4.85064,43.960248],
+                [4.850102,43.960039],
+                [4.850092,43.960023],
+                [4.849095,43.959575],
+                [4.849014,43.959533],
+                [4.848475,43.959324],
+                [4.848523,43.959273],
+                [4.848581,43.959193],
+                [4.848638,43.959117],
+                [4.848739,43.959132],
+                [4.848739,43.959139],
+                [4.848804,43.959145],
+                [4.848815,43.959157],
+                [4.848874,43.959169],
+                [4.848898,43.959189],
+                [4.848956,43.959195],
+                [4.848958,43.959202],
+                [4.849023,43.959211],
+                [4.849021,43.959227],
+                [4.849185,43.959249],
+                [4.849227,43.959036],
+                [4.849287,43.958771],
+                [4.849341,43.958511],
+                [4.850036,43.958597],
+                [4.850379,43.958644],
+                [4.850847,43.958704],
+                [4.850926,43.958703],
+                [4.850974,43.958706],
+                [4.85121,43.958455],
+                [4.85132,43.95832],
+                [4.852623,43.958879],
+                [4.853285,43.95916],
+                [4.85384,43.959391],
+                [4.854096,43.959503],
+                [4.854619,43.959714],
+                [4.854624,43.959688],
+                [4.854651,43.959615],
+                [4.854904,43.959722],
+                [4.854967,43.959761],
+                [4.855441,43.95996],
+                [4.855506,43.959886],
+                [4.856174,43.960084],
+                [4.856019,43.960305],
+                [4.856194,43.960374],
+                [4.856348,43.960439],
+                [4.856682,43.960566],
+                [4.856551,43.960703],
+                [4.857391,43.961055],
+                [4.857393,43.961069],
+                [4.857508,43.961129],
+                [4.857794,43.96136],
+                [4.857995,43.961518],
+                [4.858151,43.961662],
+                [4.858192,43.96175],
+                [4.858428,43.961909],
+                [4.858562,43.961841],
+                [4.858842,43.962117],
+                [4.859386,43.96249],
+                [4.860043,43.962924],
+                [4.859451,43.963334],
+                [4.859344,43.963399],
+                [4.859917,43.964731],
+                [4.860751,43.964921],
+                [4.860779,43.964875],
+                [4.861437,43.965025],
+                [4.861313,43.965323],
+                [4.861631,43.965394],
+                [4.861533,43.965616],
+                [4.861765,43.965674],
+                [4.861089,43.966261],
+                [4.860976,43.966307],
+                [4.860787,43.966321],
+                [4.860593,43.966385],
+                [4.860871,43.966991],
+                [4.861034,43.967367],
+                [4.860951,43.967377],
+                [4.859749,43.966918],
+                [4.8597,43.965862],
+                [4.859347,43.965717],
+                [4.85841,43.96537],
+                [4.858434,43.964683],
+                [4.857581,43.964568],
+                [4.857442,43.964913],
+                [4.857349,43.964897],
+                [4.857315,43.964973]
+
+                     ]] 
+                     }
+                 },
+
+
+            ]
+        }   
+ 
+    });
+  map.addLayer({
+        'id': 'map-Blue',
+        'type': 'fill',
+        'source': 'map-Blue',
+        'layout': {},
+        'paint': {
+            'fill-color': '#2075a8',
+            'fill-opacity': 0.9
+        }
+    });
+
+
+
+// AREAS COLOREADAS: Amarrillas
+ map.addSource('map-Yellow', {
+        'type': 'geojson',
+        
+         
+        'data': {
+            'type': 'FeatureCollection',
+            "features": [
+                
+                  {
+                     'geometry': {
+                     'type': 'Polygon',
+                     'coordinates':
+                     [[   
+                        [ 4.927927,  43.991037],[ 4.926799,  43.99159],[ 4.92587,  43.991699],[ 4.925613,  43.991224],[4.919664, 43.991774],[4.919087, 43.992048],[4.918535, 43.992259],[4.916484, 43.991577],[4.916968, 43.991131],[4.91719 , 43.990909],[4.917892, 43.990247],[4.918749, 43.989541],[4.919278, 43.989089],[4.919566, 43.988863],[4.919863, 43.988637],[4.919994, 43.988501],[4.920105, 43.988351],[4.920744, 43.987817],[4.921354, 43.987323],[4.922284, 43.986588],[4.923915, 43.987066],[4.924284, 43.987168],[4.924516, 43.987247],[4.924795, 43.987333],[4.925094, 43.987422],[4.925648, 43.987592],[4.926165, 43.987749],[4.926461, 43.987838],[4.92677 , 43.987932],[4.926921, 43.987898],[4.927081, 43.987897],[4.927645, 43.988049],[4.927654, 43.988035],[4.928174, 43.988055],[4.930095, 43.987012],[4.929003, 43.990144],[4.928536, 43.990498],[4.927927, 43.991037]
+
+                     ]] 
+                     }
+                 },
+    
+
+            ]
+        }   
+ 
+    });
+
+  map.addLayer({
+        'id': 'map-Yellow',
+        'type': 'fill',
+        'source': 'map-Yellow',
+        'layout': {},
+        'paint': {
+            'fill-color': '#D9D300',
+            'fill-opacity': 0.8
+        }
+    });
+
+
+
+// Lineas Tram 
+map.addSource("route", {
+        "type": "geojson",
+        "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [4.79803810738567,43.9440547917313],[4.79833304754205,43.9438951228479],[4.79932247076897,43.9434929872909],[4.79967109538748,43.9433633937017],[4.80008732869995,43.9431826679984],[4.80037103346578,43.943085104667],[4.8005836827957,43.9430339651891],[4.80092572465294,43.943009273944],[4.80133013889503,43.94297640806],[4.80232384170519,43.9429195312843],[4.80286977333088,43.9428795617054],[4.80317227768056,43.9428555157643],[4.80353685291708,43.9428137720372],[4.80397076535419,43.9427756458844],[4.80442459556134,43.9427419526194],[4.80482571126994,43.9427091282134],[4.80525295747439,43.9426687252838],[4.80544336733299,43.9426441432128],[4.8059891434059,43.942599397],[4.8064622863826,43.9425510853705],[4.80714965352947,43.9425016105354],[4.8074490857441,43.942484748834],[4.8078180062742,43.9424762637142],[4.80810156876327,43.9424787169936],[4.80838887867806,43.9424953981685],[4.80867221485363,43.9424907083877],[4.80876593535725,43.9424623608872],[4.80890648248838,43.9423939409761],[4.80895693141383,43.9423216524859],[4.80901723694189,43.9421444026572],[4.80905515950137,43.9419889593813],[4.80913407207178,43.9416708767076],[4.80936409971409,43.9411287866418],[4.80945942118966,43.9409372414048],[4.80965948428152,43.9405689412978],[4.80982238639468,43.9401970681427],[4.8098727749845,43.9399151842374],[4.80991025873276,43.9395382432216],[4.80993492851297,43.9392536288922],[4.80996487567548,43.9390353973944],[4.81000650165965,43.9388316443498],[4.81006946139796,43.9385304981145],[4.81016438211497,43.9381978593355],[4.81024987193616,43.9378796674046],[4.81027911392917,43.9377624761443],[4.81029374326181,43.9376002733771],[4.81030494530795,43.9374918353935],[4.81034054735408,43.9371017079824],[4.81033943084841,43.9368587860287],[4.8103000209136,43.9366154641134],[4.81029684383378,43.9363839284634],[4.81029333814809,43.9362891162123],[4.81026288325389,43.9361460545683],[4.81024275595267,43.9359934242364],[4.81018212761723,43.9357848332595],[4.8101791631801,43.9356914037503],[4.81018840014291,43.9352612931031],[4.81022417964197,43.934946500541],[4.81020882084437,43.9347161686409],[4.81020949574955,43.9344837127912],[4.81016826990978,43.9339056072458],[4.81013386194859,43.9335423674662],[4.81002821958855,43.9330976239836],[4.80989761081292,43.932587146966],[4.80982812837529,43.9322740225893],[4.80974256100546,43.9320274644933],[4.80968524266734,43.9318068742747],[4.80960933613761,43.9314343469322],[4.80951189469594,43.9305264379121],[4.80950960394814,43.9297327106504],[4.80951674830385,43.9292364892417],[4.80953063456142,43.9287912211439],[4.80952995007908,43.9287339205946],[4.80954214160745,43.9286552703822],[4.80955416368761,43.92859790907],[4.80956618574361,43.9285405477584],[4.80959374620902,43.9284743547201],[4.80970076533978,43.928419706826],[4.80982270548381,43.9283991089142],[4.80999266513242,43.9283962929271],[4.81022304586013,43.9284282017814],[4.81071874651431,43.9284714321398],[4.81145443913327,43.9285378328539],[4.81208852663923,43.9285801911743],[4.81300915106778,43.9286792399704],[4.81407965853267,43.9287657887211],[4.81560398968336,43.9289462481974],[4.81667891344099,43.9290469888156],[4.81761536373717,43.9291457358927],[4.81873413761064,43.9292571592647],[4.81974210622782,43.9293661299729],[4.82059892235674,43.9294476004428],[4.82135701674095,43.9295335683992],[4.82341954187487,43.9297235227712],[4.8240843920363,43.9297995958444],[4.82444888933763,43.9298821106651],[4.82472012304058,43.9300161993399],[4.82497453045711,43.9301805787737],[4.82540742720989,43.930417953726],[4.82573610391951,43.9306476609279],[4.82594882949617,43.930858464874],[4.8262129876663,43.9310029099406],[4.82667114214501,43.9311589967824],[4.82749201411451,43.9313209234098],[4.82809821179623,43.9314685732893],[4.82862063308906,43.9315729639698],[4.82892780409497,43.9316452294643],[4.82936430479821,43.9317135183098],[4.82942700343237,43.9317262826481],[4.82947492621982,43.9317304818325],[4.82951132247795,43.9317277525253],[4.82953369918541,43.931719890186],[4.82958038236359,43.9316994198936],[4.82968559729835,43.9315765682808],[4.83011423811059,43.9311326659678],[4.83052292685917,43.9307626972202],[4.8305576534692,43.9307365309736],[4.8305871936479,43.9307122182204],[4.83061590505566,43.9307031627036],[4.83065803648477,43.9307015039662],[4.83079028152834,43.9307145310893],[4.83121303210746,43.9307426956017],[4.83200085765942,43.9308026081198],[4.83213525896694,43.9308072600709],[4.83233776056224,43.9307605153231],[4.83245052429847,43.930680025246],[4.83253456013267,43.9306285982774],[4.83270906620259,43.9305208726436],[4.83298889948173,43.9304089976789],[4.83418580391921,43.930427016247],[4.83522483231991,43.9304548194524],[4.8357916869885,43.9304548220322],[4.83609863115403,43.9304687176225],[4.83627826309354,43.9305204791489],[4.83644027116554,43.9305699618621],[4.83658873149921,43.9305414594653],[4.83683140492353,43.9304016179286],[4.83720897048478,43.9301523272802],[4.83742321462834,43.9300585219444],[4.83757585041825,43.9300318310831],[4.83774123462483,43.9300138556182],[4.83778129489668,43.9300152752292],[4.83781545759515,43.9300148418585],[4.83782814348027,43.9300197120696],[4.83801830110181,43.9300577324149],[4.83812125435673,43.930082199691],[4.83822279085045,43.9301138360491],[4.83835857000302,43.9301853863087],[4.83853395492846,43.9303098598789],[4.83866180947591,43.9304422785373],[4.83873026426932,43.9305109124801],[4.83880009865981,43.9305916702415],[4.83891886703062,43.9306773205143],[4.83907673286758,43.9307489744987],[4.83929011849091,43.9307844431417],[4.83967993211944,43.9307721628958],[4.84080580039787,43.9307331899035],[4.84147563858373,43.9306971299705]
+
+                ]
+            }
+        }
+    });
+
+
+map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": "route",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#000",
+            "line-width": 4
+        }
+    });
+
+
+
+var geojson = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "OPERA",
+                "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.805461286068919,43.952841374417574
+                ]
+            }
+        },
+         {
+            "type": "Feature",
+            "properties": {
+                "Name": "CENTRE INTERNATIONAL DU PALAIS DES CONGRES",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.807341982117379,43.95116146308246
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "CONSERVATOIRE DE DANSE DU GRAND AVIGNON",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.8106939982156405,43.949166157720725
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "UNIVERSITE D'AVIGNON ET DES PAYS DU VAUCLUSE",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.818327809740168,43.95004161594886
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "GARE AVIGNON",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.805315443436257,43.941460516318585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "FABRIKA",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.795719777930344,43.935553419482034
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "ANRU",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.799893931714479,43.93252258004165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "PLATEFORME MULTIMODAL COURTINE",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.778106797106972,43.93471177482493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "GARE TGV",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.786782423585208,43.92328641111479
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "CENTRE HOSPITALIER HENRI DUFFAUT",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.802018355112779,43.919293219040014
+                ]
+            }
+        } 
+         
+
+
+
+    
+        
+    ]
+};
+
+
+
+ 
+
+ 
+ 
+
+
+});
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+</script>
+
+</body>
+</html>

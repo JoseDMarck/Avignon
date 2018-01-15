@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style type='text/css'>
+    #info {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #222;
+        background: #fff;
+    }
+</style>
+<div id='map'></div>
+<pre id='info'></pre>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZWRldXRlcm9zZG1hcmNrIiwiYSI6ImNpeDZtanNnOTAxZHoyemxkaWNnZzd4OHkifQ.U4_B3FTkhpSawdbFDQmhUg';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [12.584,47.922], // starting position
+    zoom:3.4,  
+});
+
+map.on('mousemove', function (e) {
+    document.getElementById('info').innerHTML =
+        // e.point is the x, y coordinates of the mousemove event relative
+        // to the top-left corner of the map
+        JSON.stringify(e.point) + '<br />' +
+            // e.lngLat is the longitude, latitude geographical position of the event
+        JSON.stringify(e.lngLat);
+});
+
+map.on('click', function (e) {
+        console.log(JSON.stringify(e.lngLat));   
+        
+});
+
+
+
+map.on('load', function () {
+
+ 
+
+
+
+
+ map.addSource('map-image', {
+   type: 'image',
+   url: 'images/',
+   coordinates: [
+    
+ 
+
+        [1.693487657887573,46.74839734745507],
+        [8.48756875191981,46.70273756113795],
+        [8.48756875191981,41.99091338138487],
+        [1.8267049342448445,41.99091338138487]
+   ]
+});
+ 
+map.addLayer({
+        'id': 'map-image',
+        'type': 'raster', //fill, line, symbol, circle, fill-extrusion, raster, background
+        'source': 'map-image',
+        'layout': {},
+        'paint': {}
+    });
+
+ 
+
+
+var geojson = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "OPERA",
+                "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.805461286068919,43.952841374417574
+                ]
+            }
+        },
+         {
+            "type": "Feature",
+            "properties": {
+                "Name": "CENTRE INTERNATIONAL DU PALAIS DES CONGRES",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.807341982117379,43.95116146308246
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "CONSERVATOIRE DE DANSE DU GRAND AVIGNON",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.8106939982156405,43.949166157720725
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "UNIVERSITE D'AVIGNON ET DES PAYS DU VAUCLUSE",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.818327809740168,43.95004161594886
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "GARE AVIGNON",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.805315443436257,43.941460516318585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "FABRIKA",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.795719777930344,43.935553419482034
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "ANRU",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.799893931714479,43.93252258004165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "PLATEFORME MULTIMODAL COURTINE",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.778106797106972,43.93471177482493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "GARE TGV",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.786782423585208,43.92328641111479
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "CENTRE HOSPITALIER HENRI DUFFAUT",
+                "description": "<strong>**Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+                "iconSize": [20, 20],
+                "nameIcon": "botones_avignon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.802018355112779,43.919293219040014
+                ]
+            }
+        } 
+ 
+
+
+
+    
+        
+    ]
+};
+
+
+
+// PUNTOS ROJOS
+var geojson = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Lyon",
+                "message": "Lyon",
+                "iconSize": [10, 10],
+                "nameIcon": "botones_avignon-green.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.838889282190763,45.75233098194187
+                ]
+            }
+        },
+       
+
+         
+         {
+            "type": "Feature",
+            "properties": {
+                "Name": "Avignon",
+                "message": "Avignon",
+                "iconSize": [20, 20],
+                "nameIcon": "pin.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.806820743234113,43.94474033203062
+                ]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Marselle",
+                "message": "Marselle",
+                "iconSize": [10, 10],
+                "nameIcon": "botones_avignon-green.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.369930168458609,43.29620715909331
+                ]
+            }
+        },
+
+
+		{
+            "type": "Feature",
+            "properties": {
+                "Name": "Barcelona",
+                "message": "Barcelona",
+                "iconSize": [10, 10],
+                "nameIcon": "botones_avignon-orange.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.175281788170082,41.382431374681744
+                ]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Genova",
+                "message": "Genova",
+                "iconSize": [10, 10],
+                "nameIcon": "botones_avignon-orange.png"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.933959300786313,44.40696948694833
+                ]
+            }
+        },
+
+
+
+
+        
+
+        
+    ],
+
+};
+
+
+
+
+
+
+
+geojson.features.forEach(function(marker) {
+
+    // create a DOM element for the marker
+    var el = document.createElement('div');
+
+    el.className = 'marker';
+    el.style.backgroundImage = 'url(./images/pines/' + marker.properties.nameIcon + ')';
+    el.style.backgroundSize = "100% 100%";
+    el.style.width = marker.properties.iconSize[0] + 'px';
+    el.style.height = marker.properties.iconSize[1] + 'px';
+
+
+
+
+     // add marker to map
+    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+
+
+        // Create a popup, but don't add it to the map yet.
+        var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
+
+
+    
+
+   el.addEventListener('mouseover', function() {
+        popup.setLngLat(marker.geometry.coordinates)
+        .setHTML(marker.properties.Name)
+        .addTo(map);
+    });
+
+
+
+     el.addEventListener('mouseout', function() {  
+       popup.remove();
+       return;
+    }); 
+
+
+
+    
+    el.addEventListener('click', function() {
+        //window.alert(marker.properties.message);
+
+
+
+        $("#info").mCustomScrollbar("destroy");
+   
+            // Comprobamos que este oculto el siderBar para mostrarlo 
+            if ( $(".siderbar_1").css('display') == 'none' ){
+                 $( ".siderbar_1" ).toggle( "slide", {direction: 'right'}, function(){ });
+                 $( ".open_info_btn" ).hide();
+             }
+
+     
+
+        // Cacheing HTML elements
+        var project = document.querySelector('#info');
+        project.style.opacity = 0;
+
+        
+        setTimeout(function(){ 
+           // Agregamos las propiedades de descripción con innerHTML
+            project.style.opacity = 1;
+
+
+            $.ajax({url: "", 
+            success: function(result){
+                 
+                console.log("Succes!!!")
+                $("#info").mCustomScrollbar({theme:"minimal",
+                    advanced:{
+                        updateOnContentResize: true
+                    }
+                });
+
+                $("#info").mCustomScrollbar("update");
+
+
+            
+            }});
+             
+        },400);
+
+
+
+    });
+
+   
+
+    // add marker to map
+    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+});
+
+ 
+
+
+// Lineas Tram 
+map.addSource("verde", {
+        "type": "geojson",
+        "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+               			[4.838889282190763,45.75233098194187],[4.806820743234113,43.94474033203062],
+               			[4.806820743234113,43.94474033203062],[5.369930168458609,43.29620715909331]
+
+
+                ]
+            }
+        }
+    });
+
+        map.addLayer({
+        "id": "verde",
+        "type": "line",
+        "source": "verde",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": '#558c25',
+            "line-width": 3,
+        }
+    });
+
+
+// Lineas Tram 
+map.addSource("naranja", {
+        "type": "geojson",
+        "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+
+
+               			[2.175281788170082,41.382431374681744],[4.806820743234113,43.94474033203062],
+               			[4.806820743234113,43.94474033203062],[8.933959300786313,44.40696948694833]
+
+
+                ]
+            }
+        }
+    });
+
+        map.addLayer({
+        "id": "naranja",
+        "type": "line",
+        "source": "naranja",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": '#FA9527',
+            "line-width": 3,
+        }
+    });
+
+
+
+
+
+
+});
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+</script>
+
+
+<style type="text/css">
+    .mapaimagen{
+        width: 100px;
+        height: 100px;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        left: 290px;
+        top: 185px;
+        display: none;
+        z-index: 9999;
+    }
+</style>
+
+
+<div class="mapaimagen"></div>
+
+
+
+
+</body>
+</html>

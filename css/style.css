@@ -1,0 +1,936 @@
+
+/* --------------------------------------------------------
+/* ---- FUENTES 
+-------------------------------------------------------- */
+
+@font-face {
+    font-family: "MoM";
+    src: url(Montserrat-Medium.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "MoL";
+    src: url(Montserrat-Light.otf) format("truetype");
+}
+@font-face {
+    font-family: "MoB";
+    src: url(Montserrat-SemiBold.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "MoExtra";
+    src: url(Montserrat-ExtraLight.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "LibreBaskerville";
+    src: url(LibreBaskerville-Regular.ttf) format("truetype");
+}
+
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------------------------------------------------
+/* ---- MAIN 
+-------------------------------------------------------- */
+
+
+.main{
+	width:100%;
+	height: 100%;
+	position: relative;
+	background: #ccc;
+	overflow: hidden;
+}
+
+
+.sombra{
+	width: 40px;
+	height: 40px;
+	z-index: 9;
+	background: rgba(0,0,0,0.8);
+	position: relative;
+	display: none;
+
+}
+
+
+.indicadoresColor{
+	position: absolute;
+    width: 215px;
+    height: auto;
+    left: 10px;
+    bottom: 12%;
+    z-index: 1;
+}
+
+.indicadoresColor img{
+	width: 100%;
+	height: auto;
+}
+ 
+
+.sub{
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------
+/* ---- HEADER
+-------------------------------------------------------- */
+
+.header{
+	width:100%;
+	height: 60px;
+	position: absolute;
+	z-index: 3;
+	background: #000;
+	box-shadow: 0px 5px 10px #888
+}
+
+/* Logo */
+
+.header > .logo{
+	width:128px;
+	height: 60px;
+	float: left;
+	overflow: hidden;
+}
+
+.header > .logo img{
+	width:100%;
+	height: auto;
+}
+
+/* Titulos  */
+
+.header > .titulos{
+	width:80%;
+	height: 60px;
+	float: left;
+	overflow: hidden;
+	align-items: center;
+	display: flex;
+	-ms-display: flex;
+}
+
+.header > .titulos > .textoBold{
+	font-family: MoExtra;
+	font-size: 18px;
+	color: #FFF;
+	margin-right: 8px;
+	text-transform: uppercase;
+}
+
+.header > .titulos > .textoSemiBold{
+	font-family: LibreBaskerville;
+	font-size: 14px;
+	color: #FFF90A;
+	 letter-spacing: 3px;
+
+}
+
+
+/* --------------------------------------------------------
+/* ---- CONTENEDOR MAPA
+-------------------------------------------------------- */
+.containerMap{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	background-color: #FFF;
+
+}
+
+
+.containerMap > .siderbar{
+	width: 33%;
+	height: 100%;
+	background:rgba(0,0,0, 0.9);
+	position: absolute;
+	right:0;
+	top:0px;
+	padding-top: 70px;
+	z-index: 2;
+	display: none;
+}
+
+.containerMap > .siderbar >.CloseSiderbar{
+	width: 20px;
+    height: 20px;
+    position: relative;
+    right: 5px;
+    z-index: 9;
+    margin: 5px;
+    overflow: hidden;
+    float: right;
+}
+
+.containerMap > .siderbar >.CloseSiderbar img{
+	width: 100%;
+	height: auto;
+}
+
+
+/* --------------------------------------------------------
+/* ---- SIDERBAR PRIMERAS PAGINAS
+-------------------------------------------------------- */
+
+.containerMap > .siderbar_1{
+	width: 296px;
+	height: 100%;
+	background:rgba(0,0,0, 0.9);
+	position: absolute;
+	right:0;
+	top:0px;
+	padding-top: 70px;
+	z-index: 2;
+	display: none;
+}
+
+.containerMap > .siderbar_1 >.CloseSiderbar{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	right: 5px;
+	z-index: 9;
+	overflow: hidden;
+	float: right;
+	right: 5px;
+	margin-bottom: 10px;
+}
+
+.containerMap > .siderbar_1 >.CloseSiderbar img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+#proj_description{
+	height: 60%;
+	overflow:hidden;
+}
+
+
+#titulo_siderbar{
+	width: 70%;
+    height: auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    color: #000;
+    padding-left: 5px;
+    font-family: MoExtra;
+    text-transform: uppercase;
+    background: #FFFB00;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+    z-index: 99;
+}
+
+#descripcion_siderbar{
+	width: 95%;
+	height: auto;
+}
+
+
+#descripcion_siderbar p {
+	color: #FFF;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+#descripcion_siderbar p a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.yellow{
+	color: yellow;
+}
+
+#WebSiteSiderbar{
+    color: #FFF;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+#WebSiteSiderbar a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+#ContactSiderbar{
+	color: #FFF;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+
+
+#contenedorInfo{
+	 width: 100%;
+	 overflow:hidden;
+	 height: 85%;
+}
+
+
+
+#info{
+	-webkit-transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -ms-transition: opacity .5s ease-in-out;
+   -o-transition: opacity .5s ease-in-out;
+   transition: opacity .5s ease-in-out;
+   overflow:hidden;
+}
+
+
+#info  .tituloSider{
+	width: 75%;
+	height: auto;
+	background: #FFFB00;
+	font-family: MoExtra;
+	color: #000;
+	padding: 5px;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+
+#info2{
+	-webkit-transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -ms-transition: opacity .5s ease-in-out;
+   -o-transition: opacity .5s ease-in-out;
+   transition: opacity .5s ease-in-out;
+   overflow:hidden;
+}
+
+
+/* --------------------------------------------------------
+/* ---- SIDERBAR paginas 1 
+-------------------------------------------------------- */
+
+.textosDescriptivos{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	color: #FFF;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: MoExtra;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.textosDescriptivos > .city{
+	text-transform: uppercase;
+}
+
+.avion::before {
+	content:url('../images/iconos_transporte/avion.png');
+	position: relative;
+    left: -10px;
+}
+
+.auto::before {
+	content:url('../images/iconos_transporte/auto.png');
+	position: relative;
+    left: -10px;
+}
+
+.tren::before {
+	content:url('../images/iconos_transporte/tren.png');
+	position: relative;
+    left: -10px;
+}
+
+
+.avion_a::before {
+	content:url('../images/iconos_transporte/avion_a.png');
+	position: relative;
+    left: -5px;
+    top: 5px;
+}
+
+.auto_a::before {
+	content:url('../images/iconos_transporte/auto_a.png');
+	position: relative;
+    left: -5px;
+    top: 4px;
+}
+
+.tren_a::before {
+	content:url('../images/iconos_transporte/tren_a.png');
+	position: relative;
+    left: -5px;
+    top: 4px;
+}
+
+
+.textosDescriptivos > .tituloDistance{
+	font-size: 16px;
+}
+
+.espacio_texto{
+	padding-left: 30px;
+	color: yellow;
+}
+
+
+
+/* --------------------------------------------------------
+/* ---- SIDERBAR 2
+-------------------------------------------------------- */
+
+
+.containerMap > .siderbar2{
+	width: 33%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.9);
+	position: absolute;
+	right:0;
+	top:0px;
+	padding-top: 70px;
+	z-index: 0;
+	display:none;
+}
+
+.containerMap > .siderbar2 >.CloseSiderbar2{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	right: 5px;
+	z-index: 9;
+	margin: 5px;
+	float: right;
+	overflow: hidden;
+}
+
+.containerMap > .siderbar2 >.CloseSiderbar2 img{
+	width: 100%;
+	height: auto;
+}
+
+.ocultar{
+	display: none !important;
+}
+
+
+#titulo_siderbar2{
+	width: 70%;
+    height: auto;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    color: #000;
+    padding-left: 5px;
+    font-family: MoExtra;
+    text-transform: uppercase;
+    background: #FFFB00;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+
+.textoSiderbar2{
+    color: #FFF;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: MoExtra;
+    letter-spacing: 1px;
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#photo_sb2{
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	z-index: 99999;
+    position: relative;
+}
+
+#photo_sb2 img{
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+}
+
+
+
+
+
+.containerMap > .open_info_btn{
+	 width: 30px;
+    height: 105px;
+	position: absolute;
+	right:0;
+	top:40%;
+	z-index: 0;
+}
+
+
+
+
+.containerMap > .open_info_btn img{
+	width: 30px;
+    height: 105px;
+}
+
+.textoCompo{
+	font-size: 14px !important;
+	line-height: 28px !important;
+}
+
+
+/* --------------------------------------------------------
+/* ---- BOTONES 
+-------------------------------------------------------- */
+
+.containerMap > .botones_right{
+	 width: 40px;
+    height: auto;
+	position: absolute;
+	left: 0;
+	bottom:30%;
+	z-index: 1;
+}
+
+
+/* --------------------------------------------------------
+/* ---- BOTONES MAPA 1
+-------------------------------------------------------- */
+
+
+/* BOTON 1 */
+.containerMap > .botones_right > .btn_mapa_1_1{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_europe_on.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+}
+
+.containerMap > .botones_right > .btn_mapa_1_1 img{
+	width: 100%; 
+	height: auto;
+}
+
+ 
+
+/* BOTON 2 */
+.containerMap > .botones_right > a >.btn_mapa_2_1{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_mediterraneo_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_2_1 img{
+	width: 100%; 
+	height: auto;
+}
+
+
+.containerMap > .botones_right > a >  .btn_mapa_2_1:hover{
+	
+	background-image: url("../images/generales_ui/avignon_mediterraneo_on.png");
+}
+
+
+/* BOTON 3 */
+.containerMap > .botones_right >  a >.btn_mapa_3_1{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_province_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_3_1 img{
+	width: 100%; 
+	height: auto;
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_3_1:hover{
+	background-image: url("../images/generales_ui/avignon_province_on.png");
+}
+
+
+
+/* --------------------------------------------------------
+/* ---- BOTONES MAPA 2
+-------------------------------------------------------- */
+
+
+/* BOTON 1 */
+.containerMap > .botones_right >  a > .btn_mapa_1_2{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_europe_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_1_2 img{
+	width: 100%; 
+	height: auto;
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_1_2:hover{
+	
+	background-image: url("../images/generales_ui/avignon_europe_on.png");
+}
+
+
+ 
+
+/* BOTON 2 */
+.containerMap > .botones_right > .btn_mapa_2_2{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_mediterraneo_on.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right > .btn_mapa_2_2 img{
+	width: 100%; 
+	height: auto;
+}
+
+
+/* BOTON 3 */
+.containerMap > .botones_right >  a > .btn_mapa_3_2{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_province_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_3_2:hover{
+	
+	background-image: url("../images/generales_ui/avignon_province_on.png");
+}
+
+
+
+ 
+
+
+
+
+/* --------------------------------------------------------
+/* ---- BOTONES MAPA 3
+-------------------------------------------------------- */
+
+
+/* BOTON 1 */
+.containerMap > .botones_right >  a > .btn_mapa_1_3{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_europe_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_1_3 img{
+	width: 100%; 
+	height: auto;
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_1_3:hover{
+	
+	background-image: url("../images/generales_ui/avignon_europe_on.png");
+}
+
+
+ 
+
+/* BOTON 2 */
+.containerMap > .botones_right >  a > .btn_mapa_2_3{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_mediterraneo_off.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_2_3 img{
+	width: 100%; 
+	height: auto;
+}
+
+.containerMap > .botones_right >  a > .btn_mapa_2_3:hover{
+	background-image: url("../images/generales_ui/avignon_mediterraneo_on.png");
+}
+
+
+/* BOTON 3 */
+.containerMap > .botones_right > .btn_mapa_3_3{
+	width: 40px; 
+	height: 40px;
+	background-image: url("../images/generales_ui/avignon_province_on.png");
+	background-size: 100%;
+	margin-bottom: 30px; 
+
+}
+
+.containerMap > .botones_right > .btn_mapa_3_3 img{
+	width: 100%; 
+	height: auto;
+}
+
+.botones_right a{
+	text-decoration: none;
+	align-items: center;
+    display: flex;
+    -ms-display: flex;
+}
+
+
+.textoTitulo1{
+	width: 300px;
+	height: 40px;
+	background: rgba(250, 0, 31, 0.9);
+	color: #FFF;
+	position: relative;
+	left: 40px;
+    padding-left: 10px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+    display: none;
+}
+
+.textoTitulo2{
+	width: 300px;
+	height: 40px;
+	background: rgba(250, 0, 31, 0.9);
+	color: #FFF;
+	position: relative;
+	left: 40px;
+    padding-left: 10px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+    display: none;
+}
+
+
+.textoTitulo3{
+	width: 250px;
+	height: 40px;
+	background: rgba(250, 0, 31, 0.9);
+	color: #FFF;
+	position: relative;
+	left: 40px;
+    padding-left: 10px;
+    font-family: MoL;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+    display: none;
+    
+}
+
+ 
+.textoRight{
+	height: 40px;
+	align-items: center;
+    display: flex;
+    -ms-display: flex;
+    
+}
+
+ 
+
+
+/* --------------------------------------------------------
+/* ---- FOOTER
+-------------------------------------------------------- */
+
+.footer {
+	width:100%;
+	position: absolute;
+	bottom: 0;
+	background: #f4f4f4;
+	z-index: 3;
+	height: 40px;
+	font-family: "MoM";
+	color: #3A3A3A;
+	font-size: 14px;
+	
+}
+
+
+
+.footer > a > .menu1 {
+	width:33%;
+	height: 40px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+
+}
+
+
+.footer > a > .menu2 {
+	width:33%;
+	height: 40px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+
+
+}
+
+.footer > a > .menu3 {
+	width:33%;
+	height: 40px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+
+
+}
+
+.rectanguloOscuro {
+	width: 23px;
+	height:40px;
+	position: absolute;
+	right: 0px;
+}
+
+.rectanguloOscuro img{
+	width: 100%;
+	height:auto;
+}
+
+.rectanguloClaro1 {
+	width: 23px;
+	height:40px;
+	position: absolute;
+	right: 0px;
+	z-index: 2;
+}
+
+.rectanguloClaro1 img{
+	width: 100%;
+	height:auto;
+}
+
+.titulobtn{
+	width: 100%;
+    height: 40px;
+    text-decoration: none;
+	color: #3A3A3A;
+	padding-top: 10px;
+	text-transform: uppercase;
+}
+
+.titulobtn a {
+	text-align: center;
+}
+
+
+.icono_btn_1:before{
+  content:url('../images/botones/iconos-01.png');  
+  position:relative;  
+  right: 10px;
+  top: 3px;
+}
+
+.icono_btn_2:before{
+  content:url('../images/botones/iconos-02.png');  
+  position:relative;  
+  right: 10px;
+  top: 3px;
+}
+
+.icono_btn_3:before{
+  content:url('../images/botones/iconos-03.png');  
+  position:relative;  
+  right: 10px;
+  top: 3px;
+}
+
+
+
+
+.colorClaro{
+	background-color: #f4f4f4 !important;
+}
+
+.colorOscuro{
+	background-color: #c2c2c2 !important;
+}
+
+.iconoG{
+	width: 34px;
+    height: 40px;
+    margin: 0 auto;
+    display: none;
+    position: relative;
+    left: -10px;
+    margin-top: 4px;
+}
+
+.iconoG img{
+	width: 100%;
+	height: auto;
+}
+
+.minus{
+	text-transform: capitalize;
+}
+
+
+
+
+ 
+
+ 
+
+

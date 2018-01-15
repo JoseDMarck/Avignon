@@ -1,0 +1,260 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/pin.png" sizes="32x32" />
+
+<meta name="description" content="Terres de création ">
+<meta property="og:image" content="images/portada_redes.jpg"/>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+
+
+<style type="text/css">
+  
+.mapboxgl-control-container{
+  display: none !important;
+}
+
+
+<style>
+.my-icon {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
+.icon-dc {
+  background: #FF2626;
+}
+
+.icon-sf {
+  background: #FF2626;
+}
+</style>
+
+
+</style>
+
+
+
+<head>
+<meta charset="UTF-8">
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+<link href='css/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+
+
+<div class="main">
+  
+    <div class="header">
+      <div class="logo">
+        <img src="images/logo.png">
+      </div>
+
+      <div class="titulos">
+      	<span class="textoBold"> POSITIONNEMENT GÉOSTRATÉGIQUE </span>
+      </div>
+
+
+    </div><!-- Header -->
+
+    <div class="containerMap">
+    	
+      <div id='map' style='width: 100%; height: 100%;'></div>
+       
+
+
+      <div class="open_info_btn">
+        <img src="images/open.png">
+      </div>
+
+
+
+      <div class="botones_right">
+          <a href="positionnment.html">
+          <div class="btn_mapa_1_2 btn_1">
+            <div class="textoTitulo1">
+                  
+                <div class="textoRight">Avignon territoire connecté</div>
+               </div>
+          </div>
+          </a>
+          
+
+          <div class="btn_mapa_2_2 btn_2">
+               <div class="textoTitulo2">
+                <div class="textoRight">
+                  Avignon territoire de convergence
+                </div>
+              </div>
+          </div>
+          
+
+          <a href="loc_prov.html">
+            <div class="btn_mapa_3_2 btn_3">
+                <div class="textoTitulo3">
+                <div class="textoRight">
+                  Avignon cœur de Provence</div>
+                </div>
+            </div>
+          </a>
+      
+
+      </div>
+
+
+      <div class="siderbar_1">
+        <div class="CloseSiderbar">
+          <img src="images/generales_ui/ex.png">
+        </div>
+        <div class="clear:both"></div>
+       
+
+       
+        <div id="contenedorInfo">
+         <div id="info">
+
+          <span class="tituloSider">
+                 Avignon territoire de convergence
+              </span>
+
+              
+                 <div class="textosDescriptivos">
+                 <h1 class="tituloDistance">Distance Européenme:</h1><br>
+                <span class="city">Tunis</span> <br>
+                <span class="espacio_texto avion">1h30 en avion</span><br>
+                <span class="city">Alger</span><br>
+                <span class="espacio_texto avion">1h40 en avion</span><br>
+                <span class="city">Rabat </span><br>
+                <span class="espacio_texto avion">2h30 en avion</span><br>
+                <span class="city">Ajaccio</span><br>
+                <span class="espacio_texto avion">1 heure en avion</span><br><br>
+
+                <h1 class="tituloDistance">Distance voiture:</h1><br>
+                <span class="city">Marseille</span><br>
+                <span class="espacio_texto auto">1 heure</span><br>
+                <span class="city"> Montpellier</span><br>
+                <span class="espacio_texto auto">1 heure</span><br>
+                <span class="city">Nice</span><br>
+                <span class="espacio_texto auto">2h30</span><br>
+                <span class="city">Lyon</span><br>
+                <span class="espacio_texto auto">2 heures</span><br>
+                <span class="city">Toulouse </span><br>
+                <span class="espacio_texto auto">3 heures</span><br>
+                <span class="city">Perpignan </span><br>
+                <span class="espacio_texto auto">2h30</span><br>
+                <span class="city">Gêne</span><br>
+                <span class="espacio_texto auto">4h30</span><br>
+                <span class="city">Turin</span><br>
+                <span class="espacio_texto auto">5 heures</span><br>
+                <span class="city">Barcelone</span><br>
+                <span class="espacio_texto auto">4h30</span><br>
+            </div>
+             
+
+
+              
+              
+         </div> <!-- Info -->
+      </div> <!-- Info -->
+
+
+            
+
+
+       
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+<div class="indicadoresColor">
+          <img src="images/ejes.png">
+      </div>
+
+
+
+ <div class="footer">
+
+  <a href="#">
+      <div class="menu1 menu_Primario_1 colorOscuro">
+
+           <div class="rectanguloOscuro"><img src="images/botones/assets-10.png"></div>
+            <div class="titulobtn icono_btn_1">POSITIONNEMENT GÉOSTRATÉGIQUE</div>
+             
+             <div class="iconoG">
+                <img src="images/botones/iconos-G_01.png">
+             </div>
+
+      </div>
+  </a>
+  
+
+
+    <a href="composition.html">
+      <div class="menu2 colorClaro">
+           <div class="rectanguloClaro1"><img src="images/botones/assets-09.png"></div>
+            <div class="titulobtn icono_btn_2">Projets et sites d’intérêt</div>
+
+             <div class="iconoG">
+                <img src="images/botones/iconos-G_02.png">
+             </div>
+
+      </div>
+    </a>
+   
+
+
+   <a href="economie.html">  
+        <div class="menu3 colorClaro">
+            <div class="titulobtn icono_btn_3">Zones d’implantation d’entreprises</div>
+        
+              <div class="iconoG">
+                <img src="images/botones/iconos-G_03.png">
+             </div>
+
+        </div>
+    </a>
+
+
+
+    <div style="clear:both;"></div>
+    </div>
+
+
+
+
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/mediterraneo/mapBoxConfig_medi.js"></script>
+  <script type="text/javascript" src="js/mediterraneo/puntos.js"></script>
+   <script type="text/javascript" src="js/mediterraneo/lineas.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="//code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- Main -->

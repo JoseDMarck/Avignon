@@ -1,0 +1,465 @@
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1920px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:2200px) {
+.containerMap > .siderbar2 {
+    width: 386px;
+}
+
+.containerMap > .siderbar {
+    width: 386px;
+}
+
+
+}/* 1920px */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1269px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1269px) {
+
+ .footer ul li#menu_europa_1 {
+    background-color: #f4f4f4;
+    background-image: url(../images/btnloc2.png);
+    background-position: 0 -5px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer ul li#menu_europa_2 {
+    background-color: #f4f4f4;
+    background-image: url('../images/btncomp.png');
+    background-position: 0 -5px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer ul li#menu_europa_3 {
+    background-color: #f4f4f4;
+    background-image: url('../images/btneco.png');
+    background-position: 0 -5px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+}/* 1269px */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1200px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1200px) {
+
+    .footer{
+        font-size: 12px;
+    }
+    
+
+
+}/* 1200px */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1000px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:998px) {
+
+    .footer{
+        height: 60px;
+    }
+    
+    
+    .footer > a > .menu1{
+        height: 60px;
+    }
+    
+    .footer > a > .menu2{
+        height: 60px;   
+    }
+    
+    .footer > a > .menu3{
+        height: 60px;   
+    }
+    
+    .rectanguloOscuro {
+        width: 35px;
+        height: 60px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .rectanguloClaro1 {
+        width: 35px;
+        height: 60px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .titulobtn{
+        width: 90%;
+        padding-top: 17px;
+    }
+
+
+}/* 998px */
+
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 980
+-------------------------------------------------------- */
+
+@media only screen and (max-width:980px) {
+
+ 
+.containerMap > .siderbar{
+	width: 50%;
+}
+
+.containerMap > .siderbar2{
+	width: 50%;
+}
+
+
+} /* 980 */
+
+/* --------------------------------------------------------
+/* ---- Responsive: 930
+-------------------------------------------------------- */
+
+@media only screen and (max-width:930px) {
+
+ 
+.titulobtn {
+    width: 90%;
+    padding-top: 10px;
+}
+
+} /* 930 */
+
+
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 750px
+-------------------------------------------------------- */
+
+@media only screen and (max-width: 750px) {
+
+.footer{
+    font-size: 10px;
+}
+
+.tulobtn {
+    width: 70%;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+    
+
+
+} /* 750px */
+
+@media only screen and (max-height: 800px) {
+
+#contenedorInfo {
+    height: 75%;
+}
+
+
+}
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 645px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:680px) {
+
+.header > .titulos > .textoBold {
+    font-size: 14px;
+}
+
+.header > .titulos > .textoSemiBold {
+    font-size: 13px;
+}
+
+.containerMap > .siderbar{
+	width: 100%;
+}
+
+.containerMap > .siderbar2{
+	width: 100%;
+}
+
+
+}
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 645px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:645px) {
+
+
+/* --------------------- 
+/* ---- HEADER ------- */
+
+
+.header {
+    height: 51px;
+}
+
+.header > .logo {
+    width: 109px;
+    height: 51px;
+}
+
+.header > .titulos {
+    width: 70%;
+    height: 51px;
+}
+
+.header > .titulos > .textoBold {
+    font-size: 18px;
+}
+
+.header > .titulos > .textoSemiBold {
+    font-size: 9px;
+}
+
+
+
+.footer{
+    height: 40px;
+}
+
+.rectanguloOscuro {
+    width: 23px;
+    height: 40px;
+}
+
+.rectanguloClaro1 {
+    width: 23px;
+    height: 40px;
+}
+
+.titulobtn{
+    display: none;
+}
+
+.iconoG{
+    display: block;
+}
+
+.tituloDistance{
+    font-size: 16px;
+}
+
+
+
+.containerMap > .siderbar_1{
+    width: 100%;
+}
+
+
+}/* 645px */
+
+
+
+@media only screen and (max-width:530px) {
+
+    .header > .titulos > .textoBold {
+        font-size: 16px;
+    }
+
+}/* 530px */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 485px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:485px) {
+
+
+ 
+
+ .footer ul li#menu_europa_1 {
+    background-color: #c3c3c3;
+    background-image: url(../images/loc1.png);
+    background-position: center center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.footer ul li#menu_europa_2 {
+    background-color: #f4f4f4;
+    background-image: url('../images/com2.png');
+        background-position: center center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.footer ul li#menu_europa_3 {
+    background-color: #f4f4f4;
+    background-image: url('../images/eco2.png');
+    background-position: center center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.header > .titulos > .textoBold {
+    font-size: 14px;
+}
+
+
+}/* 485px */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 435px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:435px) {
+
+.header {
+    height: 38px;
+}
+
+.header > .logo {
+    width: 80px;
+    height: 57px;
+}
+
+.header > .titulos {
+ 
+    height: 44px;
+   
+}
+
+
+.indicadoresColor {
+    
+    width: 200px;
+     
+}
+
+
+
+#titulo_siderbar{
+    font-size: 14px;
+}
+
+#titulo_siderbar2{
+    font-size: 14px;
+}
+
+#descripcion_siderbar p{
+
+    line-height: 24px;
+    font-size: 12px;
+}
+
+#WebSiteSiderbar{
+    line-height: 24px;
+    font-size: 12px;
+}
+
+#ContactSiderbar{
+    line-height: 24px;
+    font-size: 12px;
+}
+ 
+ .textoCompo {
+    font-size: 12px !important;
+    line-height: 24px !important;
+}
+
+
+}/* 435px */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 404px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:405px) {
+
+.header {
+    height: 38px;
+}
+ 
+.header > .titulos > .textoBold {
+    font-size: 12px;
+}
+
+
+}
+/* 368px */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 368px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:368px) {
+
+.header {
+    height: 28px;
+}
+
+.header > .logo {
+    width: 60px;
+    height: 33px;
+}
+
+.header > .titulos {
+	width: 80%;
+    height: 33px;
+}
+
+
+
+}
+/* 368px */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 320px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:320px) {
+
+.header {
+    width:320px;
+ 
+}
+
+
+}
+/* 368px */
+
+
